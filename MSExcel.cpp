@@ -1,6 +1,39 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+
+
+// +---------------------+
+// |       Cell          |
+// +---------------------+
+// | - value: string     |
+// | - formula: string   |
+// | - dependents: vector<Cell*> |
+// +---------------------+
+// | + setValue(string)  |
+// | + setFormula(string)|
+// | + evaluate():string |
+// +---------------------+
+
+//         ▲ uses
+//         |
+// +-----------------------+
+// |        Sheet          |
+// +-----------------------+
+// | - cells: 2D vector<Cell>  |
+// +---------------------------+
+// | + getCell(row, col)       |
+// | + getCellByRef(ref)       |
+// | + setCellValue()          |
+// | + setCellFormula()        |
+// +---------------------------+
+
+//         ▲ uses
+//         |
+// +-----------------------------+
+// |       FormulaParser         |
+// +-----------------------------+
+// | + evaluate(formula, sheet)  |
+// +-----------------------------+
 
 class Cell
 {
